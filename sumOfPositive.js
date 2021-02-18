@@ -7,12 +7,12 @@ function positiveSum(arr) {
     var arrSum = 0
 
     for (let i = 0; i = arr.length-1; i++){
-    	if (arr[i] > 0) {
-        	arrSum += arr[i]
-      	}
-      	else {
-      	}
-      	return arrSum
+		if (arr[i] > 0) {
+			arrSum += arr[i]
+		}
+		else {
+			//do nothing
+		}
+		return arrSum
     }
-  //return 
 }
