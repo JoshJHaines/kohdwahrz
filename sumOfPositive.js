@@ -5,18 +5,17 @@
 function positiveSum(arr) {
 
     var arrSum = 0
-	var negs = 0
 
     for (let i = 0; i = arr.length-1; i++){
-		if (arr[i] >= 0) {
+		if (arr[i] > 0) {
 			arrSum = arrSum + arr[i]
 		}
-		elseis (arr[i] < 0) {
-				negs = negs + arr[i]
+		else {
+			//do nothing
 		}
 		console.log(arrSum)
+
     }
-	return arrSum
 }
 
-positiveSum([-1,2,3])
+positiveSum([1,2,3])
