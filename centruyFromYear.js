@@ -17,6 +17,8 @@
 //if second index is less than 1, return first index
 //if second index is greater than or equal to 1, return first index +1
 
+//after testing current function, further test case's with more that 4 digit years failed.
+
 function century(year) {
 	const turnToArr = year;
 	const arrayYear = Array.from(String(turnToArr), Number);
