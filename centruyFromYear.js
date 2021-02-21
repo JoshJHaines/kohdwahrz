@@ -32,9 +32,14 @@ function century(year) {
 		arrayYear.splice(0, 0, 0);
 	}
 
-	const centVal1 = arrayYear[0].toString() + arrayYear[1].toString();
-	const centVal2 = arrayYear[2].toString() + arrayYear[3].toString();
-
+    //possibly need to use for loop to cycle through array len -2 and add onto string. then following if statements should return centVal1 regardless of len
+	let centVal1 = ""
+        for (let i = 0; i < arrayYear.length - 2; i++){
+            centVal1 = centVal1 + arrayYear[i].toString()
+        };
+	const centVal2 = arrayYear[arrayYear.length -2].toString() + arrayYear[arrayYear.length -1].toString();
+    centVal1
+    centVal2
 	if (centVal2 < 1) {
 		return parseInt(centVal1);
 	} else {
@@ -42,5 +47,5 @@ function century(year) {
 	}
 }
 
-test = century(89);
+test = century(191989);
 test;
