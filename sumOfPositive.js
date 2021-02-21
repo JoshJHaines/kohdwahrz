@@ -3,19 +3,15 @@
 //Note: if there is nothing to sum, the sum is default to 0.
 
 function positiveSum(arr) {
+	var arrSum = 0;
 
-    var arrSum = 0
-
-    for (let i = 0; i = arr.length-1; i++){
+	for (let i = 0; i < arr.length; i++) {
 		if (arr[i] > 0) {
-			arrSum = arrSum + arr[i]
+			arrSum = arrSum + arr[i];
 		}
-		else {
-			//do nothing
-		}
-		console.log(arrSum)
-
-    }
+	}
+	return arrSum;
 }
 
-positiveSum([1,2,3])
+test = positiveSum([1, 2, 3]);
+test;
