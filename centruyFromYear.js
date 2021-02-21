@@ -30,25 +30,15 @@ function century(year) {
 		arrayYear.splice(0, 0, 0);
 	}
 
-    const yearVal1 = arrayYear[0]
-    const yearVal2 = arrayYear[1]
-    const yearVal3 = arrayYear[2]
-    const yearVal4 = arrayYear[3]
+	const centVal1 = arrayYear[0].toString() + arrayYear[1].toString();
+	const centVal2 = arrayYear[2].toString() + arrayYear[3].toString();
 
-    const centVal1 = arrayYear[0].toString() + arrayYear[1].toString()
-    const centVal2 = arrayYear[2].toString() + arrayYear[3].toString()
-
-    arrayYear
-    yearVal1
-    yearVal2
-    yearVal3
-    yearVal4
-    centVal1
-    centVal2
-	return arrayYear;
+	if (centVal2 < 1) {
+		return parseInt(centVal1);
+	} else {
+		return parseInt(centVal1) + 1;
+	}
 }
 
-century(1652);
-
-
-
+test = century(89);
+test;
