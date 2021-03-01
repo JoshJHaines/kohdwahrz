@@ -2,27 +2,26 @@ function insurance(age, size, numofdays) {
 	let agePrice = 0;
 	let sizePrice = 0;
 	let daysPrice = 0;
-	const cost = agePrice + sizePrice + daysPrice;
 
 	if (age < 25) {
 		agePrice = 10 * numofdays;
 	}
 	agePrice;
 	if (size === "medium") {
-		sizePrice = 10;
+		sizePrice = 10 * numofdays;
 	}
 	if (size === "economy") {
 		sizePrice = 0;
 	} else if (size !== "economy" && size !== "medium") {
-		sizePrice = 15;
+		sizePrice = 15 * numofdays;
 	}
 	sizePrice;
 	if (numofdays >= 0) {
 		daysPrice = numofdays * 50;
-		return cost;
+		return agePrice + sizePrice + daysPrice;
 	} else if (numofdays < 0) {
 		return 0;
 	}
 }
 
-insurance(24, "medium", 10);
+insurance(18, "medium", 7);
