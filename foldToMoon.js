@@ -1,5 +1,5 @@
 function foldTo(distance) {
-    if (distance <= 0){
+    if (distance < 0){
         return null
     }
     thickness = 0.0001
