@@ -5,5 +5,24 @@
 // pigIt('Hello world !');     // elloHay orldway !
 
 function pigIt(str) {
-	//Code here
+	firstLetter = ""
+    newStr = ""
+    for (i=0, i < str.length, i++){
+        if (i === 0){
+            firstLetter = str[i]
+        }
+        if (str[i] === ' '){
+            newStr += `${firstLetter} `;
+            firstLetter = str[i + 1];
+            i++
+        } else {
+            newStr += str[i]
+        }
+    }
+console.log(newStr)
 }
+
+pigIt('Hello world !')
+console.log(pigIt('Hello world !'))
+
+console.log(6)
